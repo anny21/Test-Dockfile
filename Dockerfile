@@ -9,4 +9,4 @@ RUN apt-get update \
     
 EXPOSE 80
 
-CMD /etc/init.d/apache2 start; bash
+CMD /etc/init.d/apache2 start; mkdir /srv/mediawiki; ln -s /srv/mediawiki /var/www/html/mw; bash
